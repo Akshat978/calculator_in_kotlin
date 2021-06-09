@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:gravity="end"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#6BFF00"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExpression"
+        tools:layout_conversion_absoluteHeight="248dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
+
+    <TextView
+        android:id="@+id/tvExpression"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:ellipsize="start"
+        android:gravity="end"
+        android:singleLine="true"
+        android:textColor="#FF0000"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_absoluteHeight="90dp"
+        tools:layout_conversion_absoluteWidth="411dp" />
+
+    <TextView
+        android:id="@+id/tvClear"
+        style="@style/ActionButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Clc"
+        app:layout_constraintStart_toStartOf="@+id/tvResult"
+        app:layout_constraintTop_toBottomOf="@+id/tvResult"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvFour"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="4"
+        app:layout_constraintStart_toStartOf="@+id/tvSeven"
+        app:layout_constraintTop_toBottomOf="@+id/tvSeven"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvOpen"
+        style="@style/ActionButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="("
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvClear"
+        app:layout_constraintStart_toEndOf="@+id/tvClear"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvOne"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvTwo"
+        app:layout_constraintStart_toEndOf="@+id/tvTwo"
+        tools:layout_conversion_absoluteHeight="78dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvZero"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvDot"
+        app:layout_constraintStart_toEndOf="@+id/tvDot"
+        tools:layout_conversion_absoluteHeight="78dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvDivide"
+        style="@style/ActionButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="÷"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvOne"
+        app:layout_constraintEnd_toEndOf="@+id/tvMul"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvOne"
+        tools:layout_conversion_absoluteHeight="78dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvDot"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="."
+        app:layout_constraintStart_toStartOf="@+id/tvThree"
+        app:layout_constraintTop_toBottomOf="@+id/tvThree"
+        tools:layout_conversion_absoluteHeight="78dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvMul"
+        style="@style/ActionButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="x"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvSix"
+        app:layout_constraintEnd_toEndOf="@+id/tvMinus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvSix"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvPlus"
+        style="@style/ActionButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="+"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvClose"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toEndOf="@+id/tvClose"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvSix"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="6"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvFive"
+        app:layout_constraintStart_toEndOf="@+id/tvFive"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvTwo"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvThree"
+        app:layout_constraintStart_toEndOf="@+id/tvThree"
+        tools:layout_conversion_absoluteHeight="78dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvNine"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="9"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvEight"
+        app:layout_constraintStart_toEndOf="@+id/tvEight"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvFive"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="5"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvFour"
+        app:layout_constraintStart_toEndOf="@+id/tvFour"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvEquals"
+        style="@style/ActionButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="="
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvBack"
+        app:layout_constraintEnd_toEndOf="@+id/tvDivide"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvBack"
+        tools:layout_conversion_absoluteHeight="78dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvEight"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvSeven"
+        app:layout_constraintStart_toEndOf="@+id/tvSeven"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvClose"
+        style="@style/ActionButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text=")"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvOpen"
+        app:layout_constraintStart_toEndOf="@+id/tvOpen"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvSeven"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="7"
+        app:layout_constraintStart_toStartOf="@+id/tvClear"
+        app:layout_constraintTop_toBottomOf="@+id/tvClear"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvMinus"
+        style="@style/ActionButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="-"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvNine"
+        app:layout_constraintEnd_toEndOf="@+id/tvPlus"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvNine"
+        tools:layout_conversion_absoluteHeight="77dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvBack"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="C"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvZero"
+        app:layout_constraintStart_toEndOf="@+id/tvZero"
+        tools:layout_conversion_absoluteHeight="78dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+    <TextView
+        android:id="@+id/tvThree"
+        style="@style/NumberButtonStyle"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:text="3"
+        app:layout_constraintStart_toStartOf="@+id/tvFour"
+        app:layout_constraintTop_toBottomOf="@+id/tvFour"
+        tools:layout_conversion_absoluteHeight="78dp"
+        tools:layout_conversion_absoluteWidth="102dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
